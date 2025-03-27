@@ -406,6 +406,7 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   }
   
+  
   .project-image {
     height: 350px;
   }
