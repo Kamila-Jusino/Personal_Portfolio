@@ -36,7 +36,6 @@ nav {
   font-weight: 500;
   flex-wrap: nowrap;
   position: sticky;
-  
 }
 
 nav a {
@@ -90,7 +89,7 @@ h2 {
   padding-top: 2rem;
   position: relative;
   display: block;
-  margin:0 auto
+  margin: 0 auto;
 }
 
 /* Underline for h2 */
@@ -103,7 +102,6 @@ h2:after {
   height: 3px;
   background-color: var(--primary-color);
   margin-bottom: .5rem;
-  
 }
 
 h3 {
@@ -194,7 +192,6 @@ p {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  
 }
 
 .skill-item {
@@ -206,7 +203,6 @@ p {
   color: var(--primary-color);
   margin-bottom: 1rem;
   justify-content: center;
-  
 }
 
 .skills ul {
@@ -214,7 +210,6 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  
 }
 
 .skills li {
@@ -252,36 +247,13 @@ p {
   margin-bottom: 1rem;
 }
 
-/* Pet Section */
-.pet-section {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.pet-section figure {
-  margin-bottom: 1.5rem;
-}
-
-.pet-section img {
-  max-width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.pet-section figcaption {
-  margin-top: 0.5rem;
-  font-style: italic;
-  color: var(--secondary-color);
-}
-
 /* Projects Section */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
   justify-content: center;
   align-items: stretch;
-  gap: 2rem;
 }
 
 .project-card {
@@ -290,13 +262,18 @@ p {
   background-color: white;
   display: flex;
   flex-direction: column;
-  height: 100%; /* Ensure all cards have the same height */
+  height: 100%; 
+  text-align: left;
+  overflow: hidden;
 }
 
 .project-image {
-  height: 350px; /* Fixed height for consistency */
+  height: 400px; 
   background-color: #f0f0f0;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-image img, 
@@ -310,19 +287,31 @@ p {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /* Allow content to expand and fill available space */
+  flex-grow: 1; 
 }
 
 .project-content h3 {
   margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.project-content h4 {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.project-content ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .project-tags {
-  margin-top: auto; /* Push tags to the bottom */
+  margin-top: auto; 
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .tag {
@@ -334,7 +323,7 @@ p {
 }
 
 .project-links {
-  margin-top: auto; /* Push links to the bottom */
+  margin-top: auto;
   align-self: flex-start;
 }
 
@@ -414,11 +403,11 @@ footer {
 @media (max-width: 1024px) {
   .project-grid, 
   .skill-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   }
   
   .project-image {
-    height: 300px;
+    height: 350px;
   }
 }
 
@@ -434,22 +423,22 @@ footer {
   }
 
   .project-card {
-    width: 100%; /* Ensure full width on mobile */
+    width: 100%; 
     max-width: 100%;
   }
 
   .project-image {
-    height: auto; /* Allow natural height */
-    max-height: 500px; /* Prevent extremely tall images */
-    width: 100%; /* Full width */
+    height: auto; 
+    max-height: 500px; 
+    width: 100%; 
   }
 
   .project-image img, 
   .project-image video {
     width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Ensure full image/video is visible */
-    max-height: 500px; /* Prevent extremely tall media */
+    height: auto; 
+    object-fit: contain; 
+    max-height: 1000px; 
   }
 
   nav {
@@ -462,7 +451,6 @@ footer {
   }
 }
 
-/* Additional mobile-specific adjustments for projects */
 @media (max-width: 480px) {
   .project-image {
     max-height: 300px;
